@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    container_name: app
+    build: '.'
+    command: java -jar gamist-0.0.1-SNAPSHOT.jar
+    ports:
+      - "8080:8080"
+    restart: 'no'
