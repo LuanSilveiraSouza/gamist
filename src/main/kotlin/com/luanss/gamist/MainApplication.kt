@@ -1,4 +1,4 @@
-package com.luanss.gamelist
+package com.luanss.gamist
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @SpringBootApplication
-class GameListApplication
+class MainApplication
 
 fun main(args: Array<String>) {
-	runApplication<GameListApplication>(*args)
+	runApplication<MainApplication>(*args)
 }
 
 @RestController

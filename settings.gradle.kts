@@ -1,1 +1,1 @@
-rootProject.name = "game-list"
+rootProject.name = "gamist"
