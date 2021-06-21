@@ -8,3 +8,27 @@ services:
     ports:
       - "8080:8080"
     restart: 'no'
+    networks:
+      - main-net
+
+  postgres-db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: main
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: dockerpostgres
+      PG_DATA: /home/luanss/dev/docker-volumes/kotlin-spring-start/data
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    networks:
+      - main-net
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+networks:
+  main-net:
+
+volumes:
+  pgdata:
