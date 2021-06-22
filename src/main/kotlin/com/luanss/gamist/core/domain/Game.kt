@@ -1,6 +1,8 @@
 package com.luanss.gamist.core.domain
 
-class Game(
+import com.luanss.gamist.core.exceptions.InvalidScoreException
+
+data class Game(
     private var name: String,
     private var releaseYear: Int,
     private var developer: String,
@@ -8,7 +10,7 @@ class Game(
 ) {
     init {
         if (score < 0 || score > 100) {
-            throw Exception()
+            throw InvalidScoreException("Game score needs to be between 0 and 100")
         }
     }
 
