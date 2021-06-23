@@ -24,8 +24,13 @@ Gamist
 
 Gamist is a application to register the games you played, their score based on your experience and statistics of you playtime.
 
+### Architecture Diagram
 
-<img align="center" src="./.github/architecture.jpg">
+<img align="center" src="./.github/architecture.png">
+
+### Entities Diagram
+
+<img align="center" src="./.github/entities.png">
 
 # :computer: Technologies
 
