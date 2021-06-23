@@ -7,7 +7,7 @@ import org.junit.jupiter.api.assertThrows
 
 internal class GameTest {
     @Test
-    fun testConstructor() {
+    fun testInvalidScoreException() {
         var game1 = Game("Super Mario Bros", 1885, "Nintendo", 97)
 
         Assertions.assertEquals(game1.getScore(), 97)

@@ -10,7 +10,7 @@ data class Game(
 ) {
     init {
         if (score < 0 || score > 100) {
-            throw InvalidScoreException("Game score needs to be between 0 and 100")
+            throw InvalidScoreException()
         }
     }
 
