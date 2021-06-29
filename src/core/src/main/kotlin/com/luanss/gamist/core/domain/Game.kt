@@ -1,6 +1,6 @@
-package domain
+package com.luanss.gamist.core.domain
 
-import exception.InvalidScoreException
+import com.luanss.gamist.core.exception.InvalidScoreException
 
 data class Game(
         private var name: String,

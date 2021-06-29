@@ -1,4 +1,4 @@
-package com.luanss.gamist
+package com.luanss.gamist.infra
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,6 +1,7 @@
-package com.luanss.gamist.core.domain
+package com.luanss.gamist.core
 
-import exception.InvalidScoreException
+import com.luanss.gamist.core.domain.Game
+import com.luanss.gamist.core.exception.InvalidScoreException
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -14,7 +15,7 @@ internal class GameTest {
 
         val exception = assertThrows<InvalidScoreException>
         {
-            val game2 = Game("ET", 1882, "Atari", -6)
+            Game("ET", 1882, "Atari", -6)
         }
 
         Assertions.assertEquals(exception.message, "Game score needs to be between 0 and 100")

@@ -1,4 +1,4 @@
-package com.luanss.gamist
+package com.luanss.gamist.infra
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
