@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController
 class MainApplication
 
 fun main(args: Array<String>) {
-	runApplication<MainApplication>(*args)
+    runApplication<MainApplication>(*args)
 }
 
 @RestController
 class AppController {
-	@GetMapping
-	fun health(): Message {
-		return Message("Systems up")
-	}
+    @GetMapping
+    fun health(): Message {
+        return Message("Systems up")
+    }
 }
 
 data class Message(val text: String)

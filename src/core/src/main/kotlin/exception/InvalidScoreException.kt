@@ -1,4 +1,4 @@
-package com.luanss.gamist.core.exceptions
+package exception
 
 import java.lang.RuntimeException
 

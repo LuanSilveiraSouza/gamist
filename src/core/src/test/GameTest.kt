@@ -1,6 +1,6 @@
 package com.luanss.gamist.core.domain
 
-import com.luanss.gamist.core.exceptions.InvalidScoreException
+import exception.InvalidScoreException
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
