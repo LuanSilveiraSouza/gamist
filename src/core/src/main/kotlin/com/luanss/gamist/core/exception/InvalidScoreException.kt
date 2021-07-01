@@ -1,6 +1,4 @@
 package com.luanss.gamist.core.exception
 
-import java.lang.RuntimeException
-
-class InvalidScoreException(): RuntimeException("Game score needs to be between 0 and 100") {
+class InvalidScoreException(): BusinessException("Score needs to be between 0 and 100") {
 }
