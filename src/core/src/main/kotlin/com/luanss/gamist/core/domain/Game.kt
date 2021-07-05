@@ -77,19 +77,19 @@ open class Game(
         checkReleaseYear()
     }
 
-    private fun checkScore() {
+    open fun checkScore() {
         if (this.score < 0 || this.score > 100) {
             throw InvalidScoreException()
         }
     }
 
-    private fun checkReleaseYear() {
+    open fun checkReleaseYear() {
         if (this.releaseYear < 1970) {
             throw InvalidReleaseYearException()
         }
     }
 
-    private fun checkPlayTime() {
+    open fun checkPlayTime() {
         val currentDate = Date()
         val formatter = SimpleDateFormat("yyyy")
 
