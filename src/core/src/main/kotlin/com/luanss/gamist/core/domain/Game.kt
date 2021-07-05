@@ -4,10 +4,11 @@ import com.luanss.gamist.core.exception.InvalidPlayTimeException
 import com.luanss.gamist.core.exception.InvalidReleaseYearException
 import com.luanss.gamist.core.exception.InvalidScoreException
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.UUID
+import java.util.Date
 
-class Game(
-        private var id: UUID,
+open class Game(
+        private val id: UUID,
         private var name: String,
         private var releaseYear: Int,
         private var score: Int,
@@ -20,10 +21,14 @@ class Game(
             score: Int,
             playTime: Float,
             description: String,
-    ) : this(UUID.fromString(""), name, releaseYear, score, playTime, description) {}
+    ) : this(UUID.randomUUID(), name, releaseYear, score, playTime, description) {}
 
     init {
         validate()
+    }
+
+    fun getId(): UUID {
+        return this.id
     }
 
     fun setName(name: String) {
@@ -66,7 +71,7 @@ class Game(
         return this.description
     }
 
-    fun validate() {
+    open fun validate() {
         checkScore()
         checkPlayTime()
         checkReleaseYear()
