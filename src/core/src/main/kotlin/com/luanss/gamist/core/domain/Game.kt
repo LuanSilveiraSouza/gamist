@@ -1,5 +1,6 @@
 package com.luanss.gamist.core.domain
 
+import com.luanss.gamist.core.exception.InvalidPlayTimeException
 import com.luanss.gamist.core.exception.InvalidReleaseYearException
 import com.luanss.gamist.core.exception.InvalidScoreException
 import java.text.SimpleDateFormat
@@ -88,7 +89,7 @@ class Game(
         val formatter = SimpleDateFormat("yyyy")
 
         if (this.playTime > 0 && this.releaseYear > Integer.parseInt(formatter.format(currentDate))) {
-            throw InvalidReleaseYearException()
+            throw InvalidPlayTimeException()
         }
     }
 }

@@ -9,7 +9,7 @@ services:
       - "8080:8080"
     restart: 'no'
     networks:
-      - main-net
+      - default
 
   postgres-db:
     image: postgres:alpine
@@ -23,12 +23,16 @@ services:
     expose:
       - "5432"
     networks:
-      - main-net
+      - default
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-networks:
-  main-net:
+  networks:
+    default:
+#      driver: bridge
+#      ipam:
+#        config:
+#          - subnet: 172.16.57.0/24
 
 volumes:
   pgdata:
