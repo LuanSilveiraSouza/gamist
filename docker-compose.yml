@@ -3,8 +3,7 @@ version: '3'
 services:
   app:
     container_name: app
-    build: '.'
-    command: java -jar gamist-0.0.1-SNAPSHOT.jar
+    build: .
     ports:
       - "8080:8080"
     restart: 'no'
@@ -27,12 +26,12 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  networks:
-    default:
-#      driver: bridge
-#      ipam:
-#        config:
-#          - subnet: 172.16.57.0/24
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.57.0/24
 
 volumes:
   pgdata:

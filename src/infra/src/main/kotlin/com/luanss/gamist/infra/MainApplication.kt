@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     runApplication<MainApplication>(*args)
 }
 
-@RestController
+@RestController("/")
 class AppController {
     @GetMapping
     fun health(): Message {
